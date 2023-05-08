@@ -2,6 +2,8 @@ from create_connection import create_connection
 from create_database import create_database
 from execute_query import execute_query
 from user_choise import user_choice
+from art import *
+
 
 # создание связи с бд
 connection = create_connection("localhost", "root", "klimmed", "notes")
@@ -22,4 +24,5 @@ execute_query(connection,create_notes_table)
 
 
 if __name__ == '__main__':
+    tprint("          <<Notes>>")
     user_choice(connection)
