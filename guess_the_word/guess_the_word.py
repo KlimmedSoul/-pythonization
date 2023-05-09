@@ -83,12 +83,16 @@ def guess_the_word():
 
         if status == "win":
             Label(window, image=win, height=400, width=800).pack()
+            hint = Label(window, text=f"Ответ - {rnd_word[0]+rnd_word[1::].lower()}", font="Times 20")
+            hint.place(x = 200, y = 700)
             button = Button(window, text="Начать заново", command=restart, bg="white", foreground="black", height=30, width=100, font="Times 50")
             button.place(x = 200, y = 500)
             button.pack()
 
         elif status == "lose":
             Label(window, image=lose, height=400, width=800).pack()
+            hint = Label(window, text=f"Ответ - {rnd_word[0]+rnd_word[1::].lower()}", font="Times 20")
+            hint.place(x = 200, y = 700)
             button = Button(window, text="Начать заново", command=restart, bg="white", foreground="black", height=30, width=100, font="Times 50")
             button.place(x = 200, y = 500)
             button.pack()
